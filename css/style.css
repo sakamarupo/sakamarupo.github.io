@@ -76,24 +76,24 @@ header {
 ---------------------------------------------------------------------------*/
 /*メニュー全体を囲むブロック*/
 #menubar {
-	text-align: center;	/*文字をセンタリング*/
-	font-size: 15px;	/*文字サイズ*/
-	margin-bottom: 40px;	/*メニューの下に空けるスペース*/
+	text-align: center;
+	font-size: 15px;
+	margin-bottom: 40px;
 	letter-spacing: 8px;
 }
 /*メニュー１個あたりの設定*/
 #menubar li {
-	display: inline;	/*横並びにする設定*/
+	display: inline;
 }
 #menubar li a {
 	text-decoration: none;
-	padding: 15px 40px;	/*各メニュー内の余白。上下に15px、左右に30pxあけるという意味。*/
+	padding: 15px 40px;
 }
 /*マウスオン時、現在表示中、の設定*/
 #menubar li a:hover,
 #menubar li.current a {
-	color: #778899;	/*文字色*/
-	border-bottom: 2px solid #ffff00;	/*下線の幅、線種、色*/
+	color: #778899;
+	border-bottom: 2px solid #ffff00;
 }
 /* Works -------------------------- */
 .under {
@@ -112,6 +112,7 @@ header {
 	padding: 5px 40px;
     font-weight: 500;
 	margin-bottom: 30px;
+    
 	
 	}
 
@@ -136,6 +137,7 @@ header {
     display: flex;
     justify-content: space-between;
     overflow: hidden;
+    margin-bottom: 20px;	/*画像の下に空けるスペース*/
 
 
 }
@@ -223,7 +225,41 @@ header {
 .list p {
 	padding: 0 !important;
 }
-
+/*ボタンの領域*/
+#re-top {
+	position:fixed; /*画面に固定*/
+	bottom:10%; /*画面下へ*/
+	right:5%; /*画面右へ*/
+	z-index:10; /*レイヤー順序を上に*/
+	background-color:transparent; /*領域の背景色（透明）*/
+}
+/*丸ボタン*/
+.re-topB {
+	position:relative;
+	display:block; 
+	background-color:rgba(0,0,0,0.7); /*丸ボタンの色*/
+	color:rgb(255,255,255); /*三角と文字色*/
+	text-decoration:none;
+	font-weight:bold;
+	font-size:12px;
+	width:60px;
+	height:60px;
+	text-align:center;
+	line-height:24px;
+	border-radius:30px;
+	padding-top:30px;
+	box-sizing:border-box;
+}
+/*三角部分*/
+.re-topB:before {
+	content:'\25B2';
+	position:absolute;
+	top:10px;
+	left:0;
+	width:100%;
+	text-align:center;
+	font-size:20px;
+}
 /*フッター(ページ最下部のcopyrightのパーツ)設定
 ---------------------------------------------------------------------------*/
 footer {
